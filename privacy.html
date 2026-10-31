@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="sk">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SP400 — zásady súkromia</title><meta name="description" content="SP400: osobná analýza akcií a šifrované zálohovanie do vlastného Google Drive."><style>
+:root{color-scheme:light;--ink:#162b3d;--muted:#4c6070;--accent:#075d66;--line:#dce6e9}
+*{box-sizing:border-box}body{margin:0;background:#f4f7f8;color:var(--ink);font:17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent);text-underline-offset:3px}a:focus-visible{outline:3px solid #ce8732;outline-offset:5px}
+header,main,footer{max-width:900px;margin:auto;padding:24px}header{display:flex;gap:18px;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-size:24px;font-weight:750;text-decoration:none;letter-spacing:.03em}nav{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}nav a[aria-current=page]{font-weight:700}
+main{background:white;border:1px solid var(--line);border-radius:18px;margin:30px auto;padding:38px}h1{font-size:clamp(30px,6vw,43px);line-height:1.15;letter-spacing:-.025em;margin:0 0 18px}h2{font-size:22px;line-height:1.3;margin-top:30px}p{margin:12px 0}.lead{font-size:20px;color:var(--muted)}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}.note{padding:16px 20px;background:#edf6f5;border-left:4px solid var(--accent);border-radius:0 8px 8px 0}li{margin-bottom:8px}footer{font-size:14px;color:var(--muted);padding-top:0}code{overflow-wrap:anywhere;background:#f1f5f7;padding:2px 5px;border-radius:4px}p,a,li{overflow-wrap:anywhere}
+@media(max-width:650px){header{align-items:flex-start;flex-direction:column;padding:20px}main{margin:12px;border-radius:12px;padding:24px}nav{gap:10px 16px}footer{padding:20px}}
+</style></head>
+<body><header><a class="brand" href="index.html">SP400</a><nav aria-label="Hlavná navigácia"><a href="index.html">SP400</a><a href="privacy.html" aria-current="page">Súkromie</a><a href="terms.html">Podmienky</a></nav></header><main>
+<p class="eyebrow">Informácie o spracovaní údajov</p>
+<h1>Zásady súkromia SP400</h1>
+<p>Aktualizované 31. októbra 2026. Tieto zásady opisujú osobné používanie aplikácie SP400 spravovanej používateľom GitHub <strong>flimel4</strong>.</p>
+<h2>Prístup k údajom Google</h2>
+<p>Vlastník povoľuje prístup cez OAuth 2.0 s rozsahom <code>https://www.googleapis.com/auth/drive.file</code>. Aplikácia vytvára, číta, aktualizuje a odstraňuje svoje záložné súbory v Google Drive. Spracúva metadáta týchto súborov a informáciu o dostupnej kapacite potrebnú na bezpečné ukladanie.</p>
+<p>Údaje získané cez Google API sa používajú na zverejnené funkcie zálohovania, obnovy a kontroly úložiska. Prístup k účtu sa neudeľuje prostredníctvom tejto verejnej stránky.</p>
+<h2>Čo obsahujú zálohy</h2>
+<p>Zálohy obsahujú verejné trhové a finančné údaje, mesačné výskumné pozorovania, technickú evidenciu API limitov a prípadne investičnú históriu, ktorú vlastník v programe povolí. Rozsah sa líši podľa testovacieho alebo produkčného režimu. Zálohovací modul ukladá iba povolené dátové cesty.</p>
+<h2>Uloženie a ochrana</h2>
+<p>Výpočty prebiehajú v prostredí GitHub Actions vlastníka. Obsah záloh restic šifruje pred odoslaním do Google Drive. Poverenia sa nastavujú cez GitHub Secrets; konfigurácia rclone sa počas behu vytvára v dočasnom súbore. Za ochranu prístupu ku GitHubu, Google účtu a šifrovaciemu heslu zodpovedá vlastník.</p>
+<h2>Poskytovatelia a ďalšie použitie</h2>
+<p>GitHub poskytuje prostredie na vykonanie programu a Google poskytuje úložisko a autorizáciu. Pri povolenom e-mailovom doručení výsledok spracúva aj nastavený poskytovateľ e-mailu. Ak vlastník nastaví ďalšiu záložnú kópiu, dáta sa uložia aj do ním určeného účtu.</p>
+<p>Aplikácia nepredáva Google používateľské údaje, neposkytuje ich na reklamné profilovanie a nepoužíva ich na trénovanie všeobecných AI modelov. Výpočty nad akciovými fundamentmi pracujú s verejnými trhovými údajmi.</p>
+<h2>Uchovávanie a vymazanie</h2>
+<p>Program uchováva potrebnú normalizovanú históriu a podľa konfigurácie obmedzuje vek bežnej cache a počet celých bodov obnovy. Vlastník môže zastaviť spúšťanie, odvolať prístup aplikácie v <a href="https://myaccount.google.com/connections">nastaveniach svojho Google účtu</a> a odstrániť poverenia z GitHubu. Celé úložisko môže odstrániť vo svojom Drive po zachovaní dát, ktoré chce uchovať. Strata šifrovacieho hesla môže znemožniť obnovu záloh.</p>
+<h2>Táto informačná stránka</h2>
+<p>Stránka nemá vlastné formuláre, analytické skripty ani vlastné sledovacie cookies. Hosting GitHub Pages môže spracúvať technické údaje návštevy podľa <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">zásad súkromia GitHubu</a>.</p>
+<h2>Kontakt a zmeny</h2>
+<p>Otázky o aplikácii a jej nastavení možno adresovať správcovi cez <a href="https://github.com/flimel4/sp400-info/issues">projekt SP400 na GitHube</a>. Do verejných správ nevkladajte tajné údaje. Pri zmene spracovania musí správca aktualizovať tento opis a dátum.</p>
+</main><footer>SP400 · osobný projekt · 2026</footer></body>
+</html>
